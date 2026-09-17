@@ -46,7 +46,7 @@
             color: inherit;
         }
 
-        /* --- Header y Navegación --- */
+        /* --- Header y Logo Centrado --- */
         header {
             background-color: rgba(251, 248, 243, 0.95);
             position: fixed;
@@ -54,72 +54,40 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(163, 140, 108, 0.1);
+            box-shadow: 0 2px 10px rgba(163, 140, 108, 0.15);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
         }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-
-        .logo {
+        .logo-container {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-family: var(--font-title);
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--title-color);
+            gap: 10px;
         }
 
         .logo-img {
-            width: 34px;
-            height: 34px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             object-fit: cover;
             border: 1.5px solid var(--primary-color);
         }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-            align-items: center;
+        .brand-title {
+            font-family: var(--font-title);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--title-color);
+            letter-spacing: 0.5px;
         }
 
-        .nav-links a {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-color);
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .btn-agenda {
-            background-color: var(--primary-color);
-            color: white !important;
-            padding: 8px 18px;
-            border-radius: 20px;
-            font-size: 0.8rem !important;
-            transition: background 0.3s !important;
-        }
-
-        .btn-agenda:hover {
-            background-color: var(--primary-dark) !important;
-        }
-
-        /* --- Contenido Principal --- */
+        /* --- Contenido Principal Adaptado --- */
         .about-main {
             max-width: 800px;
-            margin: 140px auto 80px;
+            margin: 90px auto 60px; /* Margen optimizado para no solapar en celulares */
             padding: 0 20px;
             display: flex;
             flex-direction: column;
@@ -128,27 +96,27 @@
 
         .about-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .about-header h1 {
             font-family: var(--font-title);
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--title-color);
             font-weight: 400;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .about-header span {
             font-family: var(--font-script);
-            font-size: 2.8rem;
+            font-size: 2.2rem;
             color: var(--primary-color);
             display: block;
         }
 
         .about-text {
             background-color: var(--bg-alt);
-            padding: 40px;
+            padding: 35px 25px;
             border-radius: 20px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.02);
             text-align: center;
@@ -157,14 +125,14 @@
 
         .about-text p {
             margin-bottom: 20px;
-            font-size: 1rem;
+            font-size: 0.98rem;
             color: var(--text-color);
             text-align: center;
         }
 
         .about-text h2 {
             font-family: var(--font-title);
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             color: var(--title-color);
             margin: 30px 0 15px;
             text-align: center;
@@ -172,13 +140,13 @@
 
         .btn-back {
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 25px;
             background-color: var(--primary-color);
             color: white;
-            padding: 10px 25px;
+            padding: 10px 24px;
             border-radius: 25px;
             text-transform: uppercase;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             letter-spacing: 1px;
             transition: background 0.3s;
         }
@@ -187,40 +155,44 @@
             background-color: var(--primary-dark);
         }
 
+        /* Responsive Mobile Extra */
+        @media (max-width: 480px) {
+            .about-main {
+                margin-top: 80px;
+                padding: 0 15px;
+            }
+
+            .about-text {
+                padding: 25px 18px;
+            }
+
+            .brand-title {
+                font-size: 1.3rem;
+            }
+
+            .logo-img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
         /* --- Footer --- */
         footer {
             background-color: #EAE3DC;
-            padding: 30px 20px;
+            padding: 25px 20px;
             border-top: 1px solid #D9CEBE;
             text-align: center;
-        }
-
-        .footer-info a {
-            color: var(--text-color);
-            font-size: 0.9rem;
-        }
-        
-        .footer-info a:hover {
-            color: var(--primary-color);
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Header compacto con Logo y Marca -->
     <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="Gemini_Generated_Image_vt9b1rvt9b1rvt9b.jpg" alt="Logo Raíces del Alma" class="logo-img">
-                <span>Raíces del Alma</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="sobre-mi.html">Sobre Mí</a></li>
-                <li><a href="index.html#servicios">Servicios</a></li>
-                <li><a href="https://wa.me/" target="_blank" class="btn-agenda">Agendar Turno</a></li>
-            </ul>
-        </div>
+        <a href="index.html" class="logo-container">
+            <img src="Gemini_Generated_Image_vt9b1rvt9b1rvt9b.jpg" alt="Logo Raíces del Alma" class="logo-img">
+            <span class="brand-title">Raíces del Alma</span>
+        </a>
     </header>
 
     <!-- Main Content -->
