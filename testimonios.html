@@ -22,42 +22,46 @@
             box-shadow: 0 10px 30px rgba(163, 140, 108, 0.12);
         }
         .testimonios-icon-box {
-            font-size: 2.8rem;
-            color: #B58D62;
+            font-size: 3rem;
+            color: #25D366; /* Color de WhatsApp */
             margin-bottom: 15px;
         }
         .testimonios-container-box h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: #3B342C;
             margin-bottom: 12px;
         }
         .testimonios-container-box p {
             font-family: 'Montserrat', sans-serif;
             color: #595046;
-            font-size: 1rem;
-            line-height: 1.6;
-            margin: 0 auto 25px auto;
-        }
-        .btn-forms-action {
-            width: 100%;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 24px;
             font-size: 1.05rem;
+            line-height: 1.6;
+            margin: 0 auto 30px auto;
         }
-        .link-ver-testimonios {
+        .btn-whatsapp {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            color: #B58D62;
+            justify-content: center;
+            gap: 12px;
+            background-color: #25D366;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            text-decoration: underline;
-            font-size: 1.05rem;
-            transition: color 0.3s ease;
+            font-size: 1.1rem;
+            padding: 16px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
         }
-        .link-ver-testimonios:hover {
-            color: #3B342C;
+        .btn-whatsapp:hover {
+            background-color: #1EBE5D;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        .btn-whatsapp i {
+            font-size: 1.4rem;
         }
     </style>
 </head>
@@ -74,7 +78,6 @@
     </header>
 
     <div class="page-wrapper">
-        <!-- Sección de Testimonios (Conectada a Google Forms) -->
         <section class="testimonios-pagina-section">
             <div class="section-header">
                 <span class="subtitle">Libro de Experiencias</span>
@@ -82,33 +85,26 @@
                 <p>Tu opinión nos ayuda a crecer y acompaña a otros a dar el paso hacia su sanación.</p>
             </div>
 
-            <!-- Tarjeta Principal con acceso a Google Forms -->
+            <!-- Caja de envío por WhatsApp -->
             <div class="testimonios-container-box">
                 <div class="testimonios-icon-box">
-                    <i class="fa-regular fa-comment-dots"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
                 </div>
                 <h3>Queremos conocer tu vivencia</h3>
-                <p>
-                    Hacé clic en el siguiente botón para completar un breve formulario y dejarnos tu testimonio de forma rápida y sencilla.
-                </p>
+                <p>Hacé clic en el botón de abajo para enviarnos tu testimonio directamente por WhatsApp. ¡Nos alegra mucho leerte!</p>
 
-                <!-- BOTÓN 1: Pegá acá el enlace de tu Google Form -->
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-iynpUiNS7oQHOJ9TQ42nNYwuc4ETYD0wJN6BucJyrb9nPA/viewform?usp=publish-editor" target="_blank" class="btn-main btn-forms-action">
-                    <i class="fa-solid fa-pen-to-square"></i> Dejar mi experiencia
-                </a>
-            </div>
-
-            <!-- BOTÓN 2: Enlace para ver las respuestas de la planilla -->
-            <div style="text-align: center; margin-top: 35px;">
-                <p style="color: #595046; font-size: 1rem; margin-bottom: 10px;">¿Querés leer lo que dijeron otros consultantes?</p>
-                <a href="https://docs.google.com/spreadsheets/d/1iWI7wBmhpoa6JW9X6a8pNcWCiLj2GfvCFkU4fm1v0A4/edit?usp=sharing" target="_blank" class="link-ver-testimonios">
-                    <i class="fa-solid fa-table-list"></i> Ver todas las experiencias guardadas
+                <!-- ⚠️ REEMPLAZÁ EL NÚMERO (549...) POR TU NÚMERO DE WHATSAPP CON CÓDIGO DE PAÍS -->
+                <a href="https://wa.me/2645197599?text=¡Hola!%20Quiero%20compartir%20mi%20experiencia%20sobre%20las%20sesiones%20en%20Raíces%20del%20Alma:%20" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Enviar testimonio por WhatsApp
                 </a>
             </div>
 
             <!-- Botón Volver -->
             <div style="text-align: center; margin-top: 45px;">
-                <a href="index.html" class="btn-main" style="background-color: var(--secondary-color, #7A8B79);">
+                <a href="index.html" class="btn-main" style="background-color: var(--secondary-color, #7A8B79); text-decoration: none; padding: 12px 24px; border-radius: 30px; color: white; display: inline-flex; align-items: center; gap: 8px;">
                     <i class="fa-solid fa-arrow-left"></i> Volver a la página principal
                 </a>
             </div>
@@ -116,7 +112,7 @@
     </div>
 
     <!-- Footer Centrado -->
-    <footer style="text-align: center;">
+    <footer style="text-align: center; margin-top: 60px; padding-bottom: 20px;">
         <div class="footer-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
             <div class="footer-bottom-author" style="margin-top: 10px; border-top: none; padding-top: 0; text-align: center;">
                 <p>&copy; 2026 Raíces del Alma — Todos los derechos reservados.</p>
